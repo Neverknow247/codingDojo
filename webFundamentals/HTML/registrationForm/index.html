@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Registration Form</title>
+        <title>Registration Form</title>
     </head>
     <body>
         <h1>Registration Form</h1>
-        <p>Please fill out <b>ALL</b> areas</p>
-        <form action="">
+        <p>
+            "Please fill out "
+            <b>ALL</b>
+            " areas"
+        </p>
+        <form>
             <p>First and Last Name</p>
             <label for="firstName"></label>
             <input type="text" id="firstName" name="firstName">
@@ -19,19 +23,20 @@
             <label for="password"></label>
             <input type="password" id="password" name="password">
             <p>Password Confirmation</p>
-            <label for="password"></label>
-            <input type="password" id="password" name="password">
+            <label for="passwordConfirm"></label>
+            <input type="password" id="passwordConfirm" name="passwordConfirm">
             <p>Birthday</p>
             <label for="birthday"></label>
             <input type="date" id="birthday" name="birthday">
             <p>Gender <i>(optional)</i></p>
-            <label for="gender"></label>
+            
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
-            <input type="radio" id="other" name="gender">
-            <input type="text" id="other" name="gender">
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="otherGender"></label>
+            <input type="text" id="otherGender" name="gender">
             <p>Additional Description</p>
             <label for="description"></label>
             <textarea name="description" id="description" cols="100" rows="10"></textarea>
