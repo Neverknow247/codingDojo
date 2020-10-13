@@ -1,0 +1,22 @@
+body {
+    background-color: darkslategray;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1{
+    color: peachpuff;
+    font-family: fantasy;
+    background-color: black;
+    padding: 10px;
+    width: 280px;
+    margin: 0px auto;
+    text-align: center;
+}
+.post{
+    background-color: tomato;
+    padding: 20px;
+    margin: 200px;
+    border: 2px dotted peachpuff;
+    
+}

@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    padding: 60px 20px;
+    margin: 0px auto;
+    color: crimson;
+    text-align: center;
+    font-family: cursive;
+}
+.btn{
+    border: none;
+    padding: 6px 12px;
+    color: black;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 0px;
+    background-color: white;
+}
+div{
+    background-color: rgb(0, 255, 13);
+}
+h1{
+    font-size: 80px;
+    color: blue;
+    background-color: rgb(0, 255, 13);
+}
+a{
+    color: red;
+}
+li{
+    background-color: rgb(0, 255, 13);
+    border-color: blue;
+    border: 10px double blue;
+    margin: 60px;
+}
+.resize{
+    width: 1200px;
+    height: auto;
+}
