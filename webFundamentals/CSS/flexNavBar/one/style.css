@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-box{
+    background-color: blue;
+    min-height: 250px;
+    width: 1000px;
+}
+
+.center-item{
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    
+}

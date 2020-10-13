@@ -1,0 +1,32 @@
+div{
+    background-color: #4B99E8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: Montserrat;
+    font-size: small;
+    width: 1400px;
+}
+a{
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+
+ul{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+    flex-wrap: wrap;
+}
+
+li{
+    display: flex;
+    min-width: 220px;
+}
+img{
+    height: 75px;
+    width: auto;
+}
