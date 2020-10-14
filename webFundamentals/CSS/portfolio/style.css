@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(248, 247, 247);
+    font-family: sans-serif;
+    color: black;
+}
+#wrapper{
+    background-color: whitesmoke;
+    width: 1280px;
+    margin: 0 auto;
+}
+#header{
+    background-color: whitesmoke;
+    color: black;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    align-items: center;
+}
+h1{
+    font-family: cursive;
+}
+#main{
+    background-image: radial-gradient(rgb(103, 85, 107), rgb(51, 0, 51));
+    height: 1000px;
+    padding: 30px;
+}
+#section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.photo{
+    background-color: rgb(207, 200, 209);
+    width: 510px;
+    height: 339px;
+}
+#section1 img{
+    width: 500px;
+    height: auto;
+    margin: 5px;
+}
+.sectionHeaders{
+    background-image: linear-gradient(rgb(179, 179, 179), rgb(148, 130, 153), rgb(179, 179, 179));
+}
+.sectionHeaders h3, h4{
+    color: white;
+    margin: 0px;
+    padding: 8px;
+}
+#section1 .section{
+    width: 675px;
+    height: 339px;
+}
+.section{
+    background-image: linear-gradient(to right, whitesmoke, rgb(232, 220, 235));
+}
+.section p{
+    margin: 20px 10px;
+}
+a{
+    color: black;
+}
+.section img{
+    width: 385px;
+    height: auto;
+}
+#section2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#section2 .section{
+    width: 385px;
+}
+.icons img{
+    width: 50px;
+    height: auto;
+    padding: 5px 9px;
+}
+button{
+    background-color: rgb(64, 134, 64);
+    border-color: black;
+    border-radius: 7px;
+    border-width: 1px;
+    color: white;
+    padding: 5px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+#footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+#footer img{
+    width: 20px;
+    height: auto;
+}
+#footer a{
+    font-style: italic;
+    padding: 2px;
+}
