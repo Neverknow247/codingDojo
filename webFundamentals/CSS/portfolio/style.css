@@ -79,13 +79,15 @@ a{
     height: auto;
     padding: 5px 9px;
 }
-button{
+.btn a{
     background-color: rgb(64, 134, 64);
     border-color: black;
     border-radius: 7px;
     border-width: 1px;
     color: white;
     padding: 5px;
+    text-decoration: none;
+    border-style: solid;
 }
 .btn{
     display: flex;
