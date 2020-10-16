@@ -1,0 +1,17 @@
+body{
+    width: 970px;
+    margin: 0px auto;
+    color: black;
+}
+input{
+    text-align: center;
+}
+#wrap{
+
+}
+#header{
+    background-color: #2b5b84;
+}
+#header span{
+    color: white;
+}
