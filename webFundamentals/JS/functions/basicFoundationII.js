@@ -42,6 +42,14 @@ console.log(oneAnother([1,-2,3,4,5]));
 
 // Double Vision - Given an array (similar to saying 'takes in an array'), create a function that returns a new array where each value in the original array has been doubled.  Calling double([1,2,3]) should return [2,4,6] without changing the original array.
 
+function double(arr){
+    newArr=[];
+    for(i=0;i<arr.length;i++){
+        newArr.push(arr[i]*2);
+    }
+    return newArr;
+}
+console.log(double([1,2,3,4,5]));
 
 // Count Positives - Given an array of numbers, create a function to replace the last value with the number of positive values found in the array.  Example, countPositives([-1,1,1,1]) changes the original array to [-1,1,1,3] and returns it.
 
