@@ -1,0 +1,39 @@
+
+body{
+    background-color: black;
+    margin: 0px;
+}
+div.row{
+    height: 20px;
+}
+div.row div{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+div.brick{
+    background-color: blue;
+}
+div.coin{
+    background: url('img/coin.png');
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.power{
+    background: url('img/coin.png');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div#pacman{
+    background: url('img/pacman.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div.empty{
+}
