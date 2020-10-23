@@ -31,10 +31,12 @@ var world = [
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 ];
+var count = 0;
 var score = 0;
 var pacman = {
     x: 14,
-    y: 23
+    y: 23,
+    rotate: 180
 }
 
 function displayWorld() {
@@ -54,6 +56,9 @@ function displayWorld() {
             if (world[i][j] == 0) {
                 output += "<div class='empty'></div>";
             }
+            if (world[i][j] == 4){
+                output += "<div class='cherry'></div>";
+            }
         }
         output += "\n</div>";
     }
@@ -66,6 +71,7 @@ displayPacman();
 function displayPacman() {
     document.getElementById('pacman').style.top = pacman.y * 20 + "px";
     document.getElementById('pacman').style.left = pacman.x * 20 + "px";
+    document.getElementById('pacman').style.transform = "rotate(" + pacman.rotate + "deg)";
 }
 
 function displayScore() {
@@ -73,21 +79,31 @@ function displayScore() {
 }
 
 document.onkeydown = function (e) {
-    if (e.keyCode == 37 && world[pacman.y][pacman.x-1] !=2) {
+    if (e.keyCode == 37 && world[pacman.y][pacman.x - 1] != 2) {
         pacman.x--;
+        pacman.rotate = 180;
     }
-    else if (e.keyCode == 39 && world[pacman.y][pacman.x+1] !=2) {
+    else if (e.keyCode == 39 && world[pacman.y][pacman.x + 1] != 2) {
         pacman.x++;
+        pacman.rotate = 0;
     }
-    else if (e.keyCode == 38 && world[pacman.y-1][pacman.x] !=2) {
+    else if (e.keyCode == 38 && world[pacman.y - 1][pacman.x] != 2) {
         pacman.y--;
+        pacman.rotate = 270;
     }
-    else if (e.keyCode == 40 && world[pacman.y+1][pacman.x] !=2) {
+    else if (e.keyCode == 40 && world[pacman.y + 1][pacman.x] != 2) {
         pacman.y++;
+        pacman.rotate = 90;
     }
     if (world[pacman.y][pacman.x] == 1) {
         world[pacman.y][pacman.x] = 0;
-        score+=10;
+        score += 10;
+        count += 10;
+    }
+    if (world[pacman.y][pacman.x] == 4) {
+        world[pacman.y][pacman.x] = 0;
+        score += 50;
+        count += 50;
     }
     if (pacman.y == 14 & pacman.x == 0) {
         pacman.y = 14;
@@ -97,7 +113,11 @@ document.onkeydown = function (e) {
         pacman.y = 14;
         pacman.x = 1;
     }
-    displayWorld();
     displayPacman();
     displayScore()
+    if (count == 500){
+        count = 0;
+        world[17][14] = 4;
+    }
+    displayWorld();
 }

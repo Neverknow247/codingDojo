@@ -26,6 +26,12 @@ div.power{
     background-repeat: no-repeat;
     background-position: center;
 }
+div.cherry{
+    background: url('img/cherry.png');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 div#pacman{
     background: url('img/pacman.gif');
     background-size: cover;
@@ -34,7 +40,7 @@ div#pacman{
     width: 20px;
     height: 20px;
     position: absolute;
-    rotate: ;
+    transform: rotate(0deg);
 }
 div.empty{
 }
