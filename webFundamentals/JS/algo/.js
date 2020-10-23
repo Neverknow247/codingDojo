@@ -47,3 +47,70 @@ function makeChangeWithDollars(cents) {
     }
 }
 makeChangeWithDollars(90)
+
+
+
+
+
+function rollpercent(num) {
+    arr = (roll(num));
+    _min = arr[0],
+        _max = arr[0],
+        _avg = null;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] < _min) {
+            _min = arr[i];
+        }
+        if (arr[i] > _max) {
+            _max = arr[i];
+        }
+        _avg += arr[i];
+    }
+    _avg = Math.round(_avg / arr.length);
+    var newArr = [_max, _min, _avg]
+    return ("Min: " + _min + " Max: " + _max + " Average: " + _avg);
+}
+function roll(num) {
+    arr = [];
+    count = 0;
+    var last = null;
+    for (i = 0; i < 500; i++) {
+        var potato = Math.ceil(Math.random() * num);
+        count++;
+        arr.push(potato);
+        if (last == potato) {
+            console.log("Number of rolls: ", count);
+            return arr
+        }
+        last = potato;
+    }
+    return arr;
+}
+console.log(rollpercent(20));
+
+
+function rollStats() {
+    var arr = [];
+    for (i = 0; i < 4; i++) {
+        var potato = Math.ceil(Math.random() * 6);
+        arr.push(potato);
+    }
+    console.log(arr)
+    var min = arr[3];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+            temp = arr[i];
+            arr[i] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+        }
+    }
+    console.log(arr)
+    arr.pop();
+    var roll = null;
+    for (i = 0; i < arr.length; i++) {
+        roll += arr[i];
+    }
+    return roll;
+}
+console.log(rollStats());
