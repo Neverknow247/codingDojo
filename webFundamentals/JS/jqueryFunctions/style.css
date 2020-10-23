@@ -1,0 +1,26 @@
+body{
+    width: 900px;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+p{
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 25px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.box{
+    background-color: blueviolet;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+.red{
+    background-color: brown;
+}
