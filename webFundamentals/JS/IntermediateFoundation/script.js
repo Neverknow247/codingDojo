@@ -37,14 +37,21 @@ console.log(fib(6));
 
 function fib(num) {
     if (num >= 0) {
-        fib = 0;
-        for(){
-            
+        fib1 = 0;
+        fib2 = 0;
+        for (i = 0; i <= num; i++) {
+            if (i % 2 == 0) {
+                fib1 = fib1 + i;
+            }
+            else {
+                fib2 = fib2 + i;
+            }
         }
     }
     else {
         return "fib(num), num must be a positive number or 0"
     }
+    return fib1 + fib2;
 }
 
 // Array: Second-to-Last: Return the second-to-last element of an array. Given [42, true, 4, "Liam", 7], return "Liam".  If array is too short, return null.
