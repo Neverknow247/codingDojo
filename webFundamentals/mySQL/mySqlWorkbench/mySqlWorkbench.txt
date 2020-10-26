@@ -1,0 +1,11 @@
+select * from users;
+
+
+insert into users (first_name, last_name, created_at, updated_at)
+    -> values ("Nathan","Bell",now(),now());
+
+
+update users set email  = "nathan.bell421@gmail.com", updated_at = now() where id = 1;
+
+
+delete from users where last_name = "Bell";
