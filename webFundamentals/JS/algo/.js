@@ -15,13 +15,13 @@ function change(amount) {
         n += 1;
         amount -= 5;
     }
-    while (amount > 1) {
+    while (amount >= 1) {
         p += 1;
         amount -= 1;
     }
     console.log("q= ", + q + ", d= " + d + ", n= " + n + ", p= " + p)
 }
-change(90)
+change(42)
 
 
 
@@ -29,7 +29,7 @@ change(90)
 function makeChangeWithDollars(cents) {
     var coins = {
         "dollars": [100, 0],
-        "half dollars": [50, 0],
+        // "half dollars": [50, 0],
         "quarters": [25, 0],
         "dimes": [10, 0],
         "nickels": [5, 0],
@@ -46,7 +46,7 @@ function makeChangeWithDollars(cents) {
         console.log(key + ": " + coins[key][1])
     }
 }
-makeChangeWithDollars(90)
+makeChangeWithDollars(297)
 
 
 
@@ -105,7 +105,7 @@ function rollStats() {
             arr[arr.length - 1] = temp;
         }
     }
-    console.log(arr)
+    // console.log(arr)
     arr.pop();
     var roll = null;
     for (i = 0; i < arr.length; i++) {
