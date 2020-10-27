@@ -25,7 +25,7 @@ def pal(_str):
 print(pal("Rcecar"))
 
 
-def pal(_str):
+def pal1(_str):
     _str = _str.lower()
     _str = _str.replace(" ","")
     for i in range (round(len(_str)/2)):
@@ -33,11 +33,11 @@ def pal(_str):
             return False
     return True
 
-print(pal("RaceCar"))
+print(pal1("RaceCar"))
 
 
 
-def pal(_str):
+def pal2(_str):
     punc = {
         "space":" ",
         "exclaim":"!",
@@ -51,7 +51,7 @@ def pal(_str):
             return False
     return True
 
-print(pal("Race .!Car"))
+print(pal2("Race .!Car"))
 
 
 
