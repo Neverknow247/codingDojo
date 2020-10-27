@@ -43,7 +43,7 @@ def pal2(_str):
         "exclaim":"!",
         "period":"."
     }
-    for key, value in punc.items():
+    for _key, value in punc.items():
         _str = _str.replace(value,"")
     _str = _str.lower()
     for i in range (round(len(_str)/2)):
