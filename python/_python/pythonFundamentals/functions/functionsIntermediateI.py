@@ -37,3 +37,4 @@ def randomI(min = 0, max = 100):
     return int(math.ceil(num))-1
 
 print(randomI(100,98))
+
