@@ -88,6 +88,60 @@ for key, value in punc.items():
 
 # Excerpt From: Martin Puryear. “Algorithm Challenges: E-book for Dojo Students.” iBooks. 
 
-def book(_List):
-    newList = []
-    
+
+
+
+def book(_list):
+    newList = ""
+    for i in range (len(_list)):
+        if _list[i] != _list[len(_list)-1]:
+            if _list[i]+1 != _list[i+1] & _list[i]-1 != _list[i-1]:
+                newList += str(_list[i])
+                if _list[i]+1 == _list[i+1]:
+                    newList += "-"
+        # newList += 
+    return newList
+print(book([1,2,13,14,15,37,38,70]))
+
+
+# “ Parens Valid
+# Create a function that, given an input string str, returns a boolean whether parentheses in str are valid. Valid sets of parentheses always open before they close, for example. For "Y(3(p)p(3)r)s", return true. Given "N(0(p)3", return false: not every parenthesis is closed. Given "N(0)t )0(k", return false, because the underlined ")" is premature: there is nothing open for it to close.”
+
+# Excerpt From: Martin Puryear. “Algorithm Challenges: E-book for Dojo Students.” iBooks. 
+
+
+
+def parensValid(_str):
+    _open = 0
+    _close = 0
+    for i in range(len(_str)):
+        if _str[i] == "(":
+            _open +=1
+        if _str[i] == ")":
+            _close +=1
+        if _close > _open:
+            return False
+    if _open == _close:
+        return True
+    else:
+        return False
+
+print(parensValid("()test()"))
+
+
+
+
+# python code below!
+arr = [1,3,5,7]
+arr[0], arr[1] = arr[1], arr[0]
+
+
+_arr = [8,1,5,3,2,0]
+def bubble(_array):
+    for _i in range(len(_array)):
+        for i in range(1,len(_array)):
+            if _array[i] < _array[i-1]:
+                _array[i], _array[i-1] = _array[i-1], _array[i]
+    return _array
+
+print(bubble(_arr))
