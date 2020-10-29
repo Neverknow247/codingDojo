@@ -16,20 +16,32 @@ class User:
     def transfer_money(self, other, amount):
         self.balance -= amount
         other.balance += amount
+    def displayBalance(self):
+        print(f"User: {self.name}, Balance: ${self.balance}")
 
 nathan = User("Nathan")
-print (nathan.name)
-
 nathan.make_deposit(300)
-print(nathan.balance)
-nathan.make_withdrawal(50)
-print(nathan.balance)
+nathan.make_deposit(100)
+nathan.make_deposit(50)
+nathan.make_withdrawal(150)
+nathan.displayBalance()
 
 rob = User("Rob")
+rob.make_deposit(25.50)
+rob.make_deposit(25000)
+rob.make_withdrawal(1.99)
+rob.make_withdrawal(.69)
+rob.displayBalance()
 
 nathan.transfer_money(rob, 100)
-print(nathan.balance)
-print(rob.balance)
+nathan.displayBalance()
+rob.displayBalance()
 
+aaron = User("Aaron")
+aaron.make_deposit(5)
+aaron.make_withdrawal(1)
+aaron.make_withdrawal(2)
+aaron.make_withdrawal(1.25)
+aaron.displayBalance()
 
 
