@@ -22,7 +22,7 @@ def repeat(num,value):
 
 @app.route("/integer/<num>")
 def integer(num):
-    if int(num) != int():
+    if num != int(num):
         return "no"
     else:
         return "yes"
