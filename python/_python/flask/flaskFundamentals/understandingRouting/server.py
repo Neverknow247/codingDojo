@@ -11,7 +11,7 @@ def dojo():
 
 @app.route("/say/<name>")
 def hiName(name):
-    return f"Hi {name}!"
+    return f"Hi {name.capitalize()}!"
 
 if __name__ == "__main__":
     app.run(debug=True)
