@@ -14,9 +14,10 @@ def success():
     return "success"
 # app.run(debug=True) should be the very last statement! 
 
-@app.route("/nathan")
-def hello_person():
-    return "Hello Nathan"
+@app.route("/hello/<name>")
+def hello_person(name):
+    print(name)
+    return f"Hello {name}"
 
 
 if __name__ == "__main__":   # Ensure this file is being run directly and not from a different module
