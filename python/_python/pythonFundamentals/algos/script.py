@@ -145,3 +145,44 @@ def bubble(_array):
     return _array
 
 print(bubble(_arr))
+
+
+
+# function makeChangeWithDollars(cents) {
+#     var coins = {
+#         // "dollars": [100, 0],
+#         // "half dollars": [50, 0],
+#         "quarters": [25, 0],
+#         "dimes": [10, 0],
+#         "nickels": [5, 0],
+#         "pennies": [1, 0]
+#     }
+#     for (key in coins) {
+#         while (cents >= coins[key][0]) {
+#             coins[key][1]++
+#             cents -= coins[key][0]
+#         }
+#     }
+#     console.log(cents + " cents can be represented by:")
+#     for (key in coins) {
+#         console.log(key + ": " + coins[key][1])
+#     }
+# }
+# makeChangeWithDollars(297)
+
+
+
+def change(cents):
+    coins = {
+    "quarters": [25, 0],
+    "dimes": [10, 0],
+    "nickels": [5, 0],
+    "pennies": [1, 0]
+    }
+    for key in coins:
+        while cents >= coins[key][0]:
+            coins[key][1]+=1
+            cents -= coins[key][0]
+    for key in coins:
+        print(f"{key}: {coins[key][1]}")
+change(41)

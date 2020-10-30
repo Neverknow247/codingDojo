@@ -28,7 +28,7 @@ change(42)
 
 function makeChangeWithDollars(cents) {
     var coins = {
-        "dollars": [100, 0],
+        // "dollars": [100, 0],
         // "half dollars": [50, 0],
         "quarters": [25, 0],
         "dimes": [10, 0],
@@ -46,7 +46,7 @@ function makeChangeWithDollars(cents) {
         console.log(key + ": " + coins[key][1])
     }
 }
-makeChangeWithDollars(297)
+makeChangeWithDollars(41)
 
 
 
