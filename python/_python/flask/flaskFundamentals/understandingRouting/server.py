@@ -13,5 +13,12 @@ def dojo():
 def hiName(name):
     return f"Hi {name.capitalize()}!"
 
+@app.route("/repeat/<num>/<value>")
+def repeat(num,value):
+    _text = ""
+    for i in range(int(num)):
+        _text += value
+    return _text
+
 if __name__ == "__main__":
     app.run(debug=True)
