@@ -28,8 +28,8 @@ def integer(num):
 def noInteger(num):
     return f"{num} is not an integer!"
 
-@app.route("/<anything>")
-def error(anything):
+@app.errorhandler(404)
+def error():
     return "Sorry! No response. Try again."
 
 if __name__ == "__main__":
