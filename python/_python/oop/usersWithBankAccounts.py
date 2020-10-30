@@ -36,3 +36,11 @@ class User:
 nathan = User("Nathan","nate@gmail.com")
 nathan.savings = nathan.newAccount(0.05,100)
 nathan.savings.deposit(200).yield_interest().display_account_info()
+
+rob = User("Nathan","nate@gmail.com")
+rob.savings = rob.newAccount(0.05,1000)
+rob.savings.deposit(20).yield_interest().display_account_info()
+
+nathan.savings.transfer_money(rob.savings, 315)
+nathan.savings.display_account_info()
+rob.savings.display_account_info()
