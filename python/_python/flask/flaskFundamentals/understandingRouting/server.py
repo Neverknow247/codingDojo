@@ -16,9 +16,16 @@ def hiName(name):
 @app.route("/repeat/<num>/<value>")
 def repeat(num,value):
     _text = ""
-    for i in range(int(num)):
+    for _i in range(int(num)):
         _text += value
     return _text
+
+@app.route("/integer/<num>")
+def integer(num):
+    if int(num) != int():
+        return "no"
+    else:
+        return "yes"
 
 if __name__ == "__main__":
     app.run(debug=True)
