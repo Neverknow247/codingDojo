@@ -25,8 +25,12 @@ def integer(num):
     return f"{num} is an integer!"
 
 @app.route("/integer/<num>")
-def integer(num):
+def noInteger(num):
     return f"{num} is not an integer!"
+
+@app.route("/<anything>")
+def error(anything):
+    return "Sorry! No response. Try again."
 
 if __name__ == "__main__":
     app.run(debug=True)
