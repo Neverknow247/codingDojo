@@ -29,7 +29,7 @@ def noInteger(num):
     return f"{num} is not an integer!"
 
 @app.errorhandler(404)
-def error():
+def error(e):
     return "Sorry! No response. Try again."
 
 if __name__ == "__main__":
