@@ -20,12 +20,13 @@ def repeat(num,value):
         _text += value
     return _text
 
+@app.route("/integer/<int:num>")
+def integer(num):
+    return f"{num} is an integer!"
+
 @app.route("/integer/<num>")
 def integer(num):
-    if num != int(num):
-        return "no"
-    else:
-        return "yes"
+    return f"{num} is not an integer!"
 
 if __name__ == "__main__":
     app.run(debug=True)
