@@ -170,7 +170,59 @@ print(bubble(_arr))
 # }
 # makeChangeWithDollars(297)
 
+# class myCoins():
+#     def __init__(self,q,d,n,p):
+#         self.quarters = q
+#         self.dimes = d
+#         self.nickles = n
+#         self.pennies = p
+#     def coins(self):
+#         print(f"Quarters: {self.quarters}, Dimes: {self.dimes}, Nickles: {self.nickles}, Pennies: {self.pennies}")
+#         return self
 
+
+# def change(cents):
+#     q = 0
+#     d = 0
+#     n = 0
+#     p = 0
+#     coins = {
+#     "quarters": [25, 0],
+#     "dimes": [10, 0],
+#     "nickels": [5, 0],
+#     "pennies": [1, 0]
+#     }
+#     for key in coins:
+#         while cents >= coins[key][0]:
+#             coins[key][1]+=1
+#             cents -= coins[key][0]
+#             for i in range(4):
+#                 if i == 0:
+#                     q =(coins[key][1])
+#                 if i == 0:
+#                     d =(coins[key][1])
+#                 if i == 0:
+#                     n =(coins[key][1])
+#                 if i == 0:
+#                     p =(coins[key][1])
+#     _change = myCoins(q,d,n,p)
+#     return _change
+# _change = change(41)
+# _change.coins()
+
+
+
+
+
+class myCoins():
+    def __init__(self,q,d,n,p):
+        self.quarters = q
+        self.dimes = d
+        self.nickels = n
+        self.pennies = p
+    def coins(self):
+        print(f"Quarters: {self.quarters}, Dimes: {self.dimes}, Nickles: {self.nickels}, Pennies: {self.pennies}")
+        return self
 
 def change(cents):
     coins = {
@@ -183,6 +235,6 @@ def change(cents):
         while cents >= coins[key][0]:
             coins[key][1]+=1
             cents -= coins[key][0]
-    for key in coins:
-        print(f"{key}: {coins[key][1]}")
-change(41)
+    return myCoins(coins["quarters"][1],coins["dimes"][1],coins["nickels"][1],coins["pennies"][1])
+_change = change(42)
+_change.coins()
