@@ -238,3 +238,83 @@ def change(cents):
     return myCoins(coins["quarters"][1],coins["dimes"][1],coins["nickels"][1],coins["pennies"][1])
 _change = change(42)
 _change.coins()
+
+
+
+
+
+# class Node:
+#     def __init__(self,value_input):
+#         self.value = value_input
+#         self.next = None
+#     def 
+
+# class SLL():
+#     def __init__(self):
+#         self.head = None
+
+#     def addToBack(self, value_input):
+#         newnode = Node(value_input)
+#         if self.head == None:
+#             self.head = newnode
+#         else:
+#             runner = self.head
+#             while runner.next != None:
+#                 runner = runner.next
+#             runner.next = newnode
+#         return self
+#     def display(self):
+#         runner = self.head
+#         result = ""
+#         while runner != None:
+#             result += f"{runner.value}-->"
+
+
+
+class Node:
+    def __init__(self, valueInput):
+        self.value = valueInput
+        self.next = None
+
+
+class SLL:
+    def __init__(self):
+        self.head = None
+
+    def addToBack(self, valueInput):
+        newnode = Node(valueInput)
+        if self.head == None:    
+            self.head = newnode
+        else:
+            #runner is a variable we use to iterate through the SLL
+            runner = self.head
+
+            while runner.next != None:
+                runner = runner.next
+
+            runner.next = newnode
+        return self
+
+    def display(self):
+        runner = self.head
+        result = ""
+        while runner != None:
+            result += f"{runner.value}-->"
+            runner = runner.next
+        print(result)
+        return self
+
+
+
+sll1 = SLL()
+
+sll1.addToBack(5).addToBack(8).addToBack(10).addToBack(20).display()
+
+# n1 = Node(5)
+# n2 = Node(8)
+# n3 = Node(10)
+
+# head = n1
+
+# n1.next = n2
+# n2.next = n3
