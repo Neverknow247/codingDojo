@@ -4,7 +4,7 @@ def root(request):
     return redirect("/blogs")
 
 def index(request):
-    return HttpResponse("placeholder to later display a list of all blogs")
+    return render(request, "index.html")
 
 def new(request):
     return HttpResponse("placeholder to display a new form to create a new blog")
@@ -23,3 +23,9 @@ def destroy(request,number):
 
 def json(request):
     return JsonResponse({"title": "My first blog", "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."})
+
+def helloName(request, name):
+    context = {
+        "htmlname": name.capitalize()
+    }
+    return render(request, "helloname.html", context)
