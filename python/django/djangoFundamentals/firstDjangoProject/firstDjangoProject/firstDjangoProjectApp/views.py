@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.http import JsonResponse
 def root(request):
     return redirect("/blogs")
 
@@ -21,4 +22,4 @@ def destroy(request,number):
     return redirect("/blogs")
 
 def json(request):
-    pass
+    return JsonResponse({"title": "My first blog", "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit."})
