@@ -280,6 +280,7 @@ class Node:
 class SLL:
     def __init__(self):
         self.head = None
+        self.previous = None
 
     def addToBack(self, valueInput):
         newnode = Node(valueInput)
@@ -303,12 +304,22 @@ class SLL:
             runner = runner.next
         print(result)
         return self
+    
+    def addToFront(self, valueInput):
+        if self.head != None:
+            newnode = Node(valueInput)
+            newnode.next = self.head
+            self.head.previous = newnode
+            self.head = newnode
+            return self
 
-
+    def contains(self, valueInput):
+        pass
 
 sll1 = SLL()
 
 sll1.addToBack(5).addToBack(8).addToBack(10).addToBack(20).display()
+sll1.addToFront(69).addToFront(42).display()
 
 # n1 = Node(5)
 # n2 = Node(8)
