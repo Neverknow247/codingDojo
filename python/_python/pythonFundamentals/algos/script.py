@@ -287,7 +287,6 @@ class SLL:
         if self.head == None:    
             self.head = newnode
         else:
-            #runner is a variable we use to iterate through the SLL
             runner = self.head
 
             while runner.next != None:
