@@ -319,12 +319,37 @@ class SLL:
             runner = runner.next
         return False
 
-sll1 = SLL()
+    def removeFront(self):
+        if self.head != None:
+            self.head = self.head.next
+        return self
 
-sll1.addToBack(5).addToBack(8).addToBack(10).addToBack(20).display()
+    def removeTail(self):
+        if self.head == None:
+            return "List must contain values"
+        elif self.head.next == None:
+            self.head = None
+            return self
+        runner = self.head
+        while runner.next.next != None:
+            runner = runner.next
+        runner.next = None
+        return self
+
+sll1 = SLL()
+print(sll1.removeTail())
+
+sll1.addToBack(5).removeTail().addToBack(8).addToBack(10).addToBack(20).display()
 sll1.addToFront(69).addToFront(42).display()
 sll1.addToBack(2).addToFront(1).addToBack(9).display()
 sll1.contains(42)
+sll1.removeFront().removeFront().display()
+sll1.removeTail().display()
+
+
+
+
+
 
 # n1 = Node(5)
 # n2 = Node(8)
