@@ -1,3 +1,11 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 def index(request):
-    return HttpResponse("This is the Index")
+    return render(request,"index.html")
+
+def createUser(request):
+    print("Got Post Info........................")
+    name_from_form = request.POST['name']
+    email_from_form = request.POST['email']
+    print(name_from_form)
+    print(email_from_form)
+    return render(request, "index.html")
