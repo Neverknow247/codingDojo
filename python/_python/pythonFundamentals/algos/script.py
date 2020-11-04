@@ -276,7 +276,6 @@ class Node:
         self.value = valueInput
         self.next = None
 
-
 class SLL:
     def __init__(self):
         self.head = None
@@ -326,7 +325,8 @@ class SLL:
 
     def removeTail(self):
         if self.head == None:
-            return "List must contain values"
+            print("List must contain values")
+            return self
         elif self.head.next == None:
             self.head = None
             return self
@@ -337,7 +337,7 @@ class SLL:
         return self
 
 sll1 = SLL()
-print(sll1.removeTail())
+sll1.removeTail().display()
 
 sll1.addToBack(5).removeTail().addToBack(8).addToBack(10).addToBack(20).display()
 sll1.addToFront(69).addToFront(42).display()
