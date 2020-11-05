@@ -346,6 +346,27 @@ sll1.contains(42)
 sll1.removeFront().removeFront().display()
 sll1.removeTail().display()
 
+def moveMinToFront(linkList):
+    if linkList.head.value != None:
+        _min = linkList.head
+        runner = linkList.head
+        while runner.next != None:
+            if runner.next.value < _min.value:
+                _min = runner.next
+            runner = runner.next
+        runner = linkList.head
+        while runner.next != None:
+            if runner.next == _min:
+                runner.next = runner.next.next
+            if runner.next != None:
+                runner = runner.next
+        _min.next = linkList.head
+        linkList.head = _min
+    return linkList
+
+moveMinToFront(sll1)
+sll1.display()
+
 
 
 
