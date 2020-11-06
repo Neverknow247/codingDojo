@@ -365,10 +365,28 @@ def moveMinToFront(linkList):
     return linkList
 
 moveMinToFront(sll1)
+sll1.display().display()
+
+def _append(linkList,valueInput,beforeInput):
+    if linkList.head != None:
+        if linkList.head.value == beforeInput:
+            newnode = Node(valueInput)
+            newnode.next = linkList.head
+            linkList.head = newnode
+            return linkList
+        runner = linkList.head
+        while runner.next != None:
+            if runner.next.value == beforeInput:
+                newnode = Node(valueInput)
+                newnode.next = runner.next
+                runner.next = newnode
+                return linkList
+            runner = runner.next
+    return linkList
+
+
+_append(sll1,15,2)
 sll1.display()
-
-
-
 
 
 
