@@ -279,7 +279,6 @@ class Node:
 class SLL:
     def __init__(self):
         self.head = None
-        self.previous = None
 
     def addToBack(self, valueInput):
         newnode = Node(valueInput)
@@ -385,7 +384,7 @@ def _append(linkList,valueInput,beforeInput):
     return linkList
 
 
-_append(sll1,15,2)
+_append(sll1,15,10)
 sll1.display()
 
 
