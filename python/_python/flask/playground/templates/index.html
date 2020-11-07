@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
     <style>
-        body{
+        body {
             width: 900px;
+            margin: 0px auto;
+            align-items: center;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        .box {
+            height: 175px;
+            width: 175px;
+            outline: 3px solid black;
+            margin: 10px;
+        }
+        div{
+            display: inline-block;
         }
     </style>
 </head>
+
 <body>
-    <h1>Welcome</h1>
+    <h1>Welcome!</h1>
+    <div>
+        {%for i in range(times):%}
+        <div style="background-color: {{color}};" class="box"></div>
+        {%endfor%}
+    </div>
 </body>
+
 </html>
