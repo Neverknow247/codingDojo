@@ -1,0 +1,19 @@
+body{
+    font-family: cursive;
+    width: 900px;
+    margin: 50px auto;
+}
+.col{
+    padding: 4px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid grey;
+    color: grey;
+}
+.head{
+    color: darkslategray;
+    font-weight: 800;
+    border-top: 1px solid gray;
+}
+.last{
+    border-right: 1px solid grey;
+}

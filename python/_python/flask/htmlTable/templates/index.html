@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="row row-cols-3">
+            <div class="col head">First Name</div>
+            <div class="col head">Last Name</div>
+            <div class="col head last">Full Name</div>
+            {%for user in userList%}
+            <div class="col">{{ user['first_name'] }}</div>
+            <div class="col">{{ user['last_name'] }}</div>
+            <div class="col last">{{ user['first_name'] }} {{ user['last_name'] }}</div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+
+</html>
