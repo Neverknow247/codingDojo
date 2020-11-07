@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkerboard</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 
 <body>
-    <div></div>
-    <div></div>
-    <!-- {%for i in range(numY):%} -->
-    <!-- {%if (i == 0):%} -->
-    <div></div>
-    <!-- {%endif%}
-    {%if (i == 1):%} -->
-    <div></div>
-    <!-- {%endif%} -->
-    <!-- {%endfor%} -->
+    <div id="board">
+        {%for j in range(numY):%}
+        <div class="row">
+            {%if (j%2 != 0):%}
+            {%for i in range(numX):%}
+            {%if (i%2 != 0):%}
+            <div class="white box" style="background-color: {{color1}};"></div>
+            {%endif%}
+            {%if (i%2 == 0):%}
+            <div class="black box" style="background-color: {{color2}};"></div>
+            {%endif%}
+            {%endfor%}
+            {%endif%}
+            {%if (j%2 == 0):%}
+            {%for i in range(numX):%}
+            {%if (i%2 == 0):%}
+            <div class="white box" style="background-color: {{color1}};"></div>
+            {%endif%}
+            {%if (i%2 != 0):%}
+            <div class="black box" style="background-color: {{color2}};"></div>
+            {%endif%}
+            {%endfor%}
+            {%endif%}
+        </div>
+        {%endfor%}
+    </div>
+
 </body>
 
 </html>
