@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 def index(request):
     return render(request,"index.html")
         
@@ -9,4 +9,7 @@ def createUser(request):
         "name_on_template" : name_from_form,
         "email_on_template" : email_from_form
     }
-    return render(request,"show.html",context)
+    return redirect("/success")
+
+def success(request):
+    return render(request,"success.html")
