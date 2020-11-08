@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "D:\\codingDojo\\python\\django\\myEnvironments\\djangoPy3Env\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
