@@ -1,0 +1,14 @@
+from usersApp.models import *
+users.objects.create(firstName = "Nathan", lastName = "Bell", email = "nathan.bell421@gmail.com", age = 29)
+users.objects.create(firstName = "Naruto", lastName = "Uzumaki", email = "nuzumaki@gmail.com", age = 18)
+users.objects.create(firstName = "Joe", lastName = "Mama", email = "gotcha!@gmail.com", age = 69)
+users.objects.all()
+users.objects.last()
+users.objects.first()
+updating = users.objects.get(id=3)
+updating.lastName = "Pancakes"
+updating.save()
+updating = users.objects.get(id=2)
+updating.delete()
+users.objects.all().order_by("firstName")
+users.objects.all().order_by("-firstName")
