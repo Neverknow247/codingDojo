@@ -30,6 +30,7 @@
     <div class="divider"></div>
     <h1>Add a User</h1>
     <form action="addUser">
+        {% csrf_token %}
         <div>
             <div>
                 <p>First Name </p>

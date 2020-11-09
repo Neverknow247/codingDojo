@@ -8,4 +8,7 @@ def index(request):
     return render(request, "index.html", context)
 
 def addUser(request):
+    context = {
+        
+    }
     return redirect('/')
