@@ -1,0 +1,33 @@
+python manage.py shell
+from dojoAndNinjaApp.models import dojos, ninjas
+dojos.objects.create(name = "Chicago Dojo", city = "Chicago", state = "IL")
+dojos.objects.create(name = "West Coast Dojo", city = "L.A.", state = "CA")
+dojos.objects.create(name = "Online Dojo", city = "N/A", state = "N/A")
+dojos.objects.get(id=1).delete()
+dojos.objects.get(id=2).delete()
+dojos.objects.get(id=3).delete()
+dojos.objects.create(name = "Best Dojo", city = "Chicago", state = "IL")
+dojos.objects.create(name = "West Coast Dojo", city = "Monterey", state = "CA")
+dojos.objects.create(name = "East Coast Dojo", city = "Myrtle Beach", state = "SC")
+ninjas.objects.create(dojo = dojos.objects.first(), firstName = "Nathan", lastName = "Bell")
+ninjas.objects.create(dojo = dojos.objects.first(), firstName = "Saurabh", lastName = "Dahal")
+ninjas.objects.create(dojo = dojos.objects.first(), firstName = "Rob", lastName = "Yearling")
+dojo = dojos.objects.get(id = 5)
+ninjas.objects.create(dojo = dojo, firstName = "Anne", lastName = "Jurack")
+ninjas.objects.create(dojo = dojo, firstName = "Allison", lastName = "Moore")
+ninjas.objects.create(dojo = dojo, firstName = "Dawn", lastName = "Vogt")
+dojo = dojos.objects.get(id = 6)
+ninjas.objects.create(dojo = dojo, firstName = "Kyle", lastName = "Reimers")
+ninjas.objects.create(dojo = dojo, firstName = "Jonathon", lastName = "Merges")
+ninjas.objects.create(dojo = dojo, firstName = "Aaron", lastName = "Samples")
+dojos.objects.first().ninja.all()
+dojos.objects.last().ninja.all()
+ninjas.objects.last().dojo
+exit()
+python manage.py makemigrations
+1
+"old dojo"
+python manage.py migrate
+python manage.py shell
+from dojoAndNinjaApp.models import *
+dojos.objects.create(name = "Online Dojo", city = "N/A", state = "N/A", desc = "New online only dojo")
