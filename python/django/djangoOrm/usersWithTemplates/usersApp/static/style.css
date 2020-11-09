@@ -8,7 +8,7 @@ body{
     align-items: center;
 }
 tr{
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
 }
 th{
     border-left: 2px solid black;
