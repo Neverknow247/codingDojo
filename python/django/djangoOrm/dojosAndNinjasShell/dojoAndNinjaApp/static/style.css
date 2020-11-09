@@ -1,6 +1,23 @@
 body{
     width: 960px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0px auto;
 }
-h1{
-    color: brown;
+p{
+    text-align: left;
+}
+.break{
+    height: 1px;
+    background-color: black;
+    margin: 10px;
+}
+#header{
+    display: flex;
+    justify-content: space-evenly;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    text-align: left;
 }

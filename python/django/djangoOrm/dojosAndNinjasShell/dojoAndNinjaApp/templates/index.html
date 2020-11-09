@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,56 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
 <body>
     <div id="header">
         <div id="addDojo">
             <h1>Add a Dojo</h1>
+            <form action="addDojo">
+                <div class="column">
+                    <p>Name</p>
+                    <p>City</p>
+                    <p>State</p>
+                </div>
+                <div class="column">
+                    {% for dojo in dojoList %}
+                    {% endfor %}
+                    <button type="submit">Add</button>
+                </div>
+            </form>
         </div>
         <div id="addNinja">
             <h1>Add a Ninja</h1>
+            <form action="addNinja">
+                <div class="column">
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Dojo</p>
+                </div>
+                <div class="column">
+                    {% for ninja in ninjas %}
+                    {% endfor %}
+                    <button type="submit">Add</button>
+                </div>
+            </form>
         </div>
     </div>
     <div class="break"></div>
     <div id="footer">
-        <h1>All the Dojos</h1>
+        <div id="dojoList">
+            <h1>All the Dojos</h1>
+            {% for dojo in dojoList %}
+            <h3>{{ dojo.name}}</h3>
+            <ul>
+                {% for ninja in dojo.ninja.all %}
+                <li>
+                    {{ ninja.firstName }} {{ ninja.lastName}}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
     </div>
 </body>
+
 </html>
