@@ -13,30 +13,40 @@
     <div id="header">
         <div id="addDojo">
             <h1>Add a Dojo</h1>
-            <form action="addDojo">
+            <form action="addDojo" method="post">
+                {% csrf_token %}
                 <div class="column">
                     <p>Name</p>
                     <p>City</p>
                     <p>State</p>
                 </div>
                 <div class="column">
-                    {% for dojo in dojoList %}
-                    {% endfor %}
+                    <p><input type="text" name="name"></p>
+                    <p><input type="text" name="city"></p>
+                    <p><input type="text" name="state"></p>
                     <button type="submit">Add</button>
                 </div>
             </form>
         </div>
         <div id="addNinja">
             <h1>Add a Ninja</h1>
-            <form action="addNinja">
+            <form action="addNinja" method="post">
+                {% csrf_token %}
                 <div class="column">
                     <p>First Name</p>
                     <p>Last Name</p>
                     <p>Dojo</p>
                 </div>
                 <div class="column">
-                    {% for ninja in ninjas %}
-                    {% endfor %}
+                    <p><input type="text" name="fname"></p>
+                    <p><input type="text" name="lastName"></p>
+                    <p>
+                        <select name="dojo">
+                            {% for dojo in dojoList %}
+                            <option value="{{dojo.id}}">{{dojo.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </p>
                     <button type="submit">Add</button>
                 </div>
             </form>

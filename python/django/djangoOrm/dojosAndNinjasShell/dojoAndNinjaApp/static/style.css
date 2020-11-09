@@ -6,6 +6,7 @@ body{
 }
 p{
     text-align: left;
+    margin-right: 5px;
 }
 .break{
     height: 1px;
@@ -19,5 +20,11 @@ p{
 #footer{
     display: flex;
     justify-content: center;
+    text-align: left;
+}
+form{
+    display: flex;
+}
+.column{
     text-align: left;
 }
