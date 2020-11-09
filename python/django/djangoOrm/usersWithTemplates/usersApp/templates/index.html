@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,48 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
 <body>
     <h1>All The Users</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+        {% for user in allUsers %}
+        <tr>
+            <th>{{ user.id }}</th>
+            <th>{{ user.firstName }} {{ user.lastName }}</th>
+            <th>{{ user.email }}</th>
+            <th>{{ user.age }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="divider"></div>
+    <h1>Add a User</h1>
+    <form action="addUser">
+        <div>
+            <div>
+                <p>First Name </p>
+                <p>Email </p>
+            </div>
+            <div>
+                <p><input type="text" name="firstName"></p>
+                <p><input type="text" name="email"></p>
+            </div>
+            <div>
+                <p>Last Name </p>
+                <p>Age </p>
+            </div>
+            <div>
+                <p><input type="text" name="lastName"></p>
+                <p><input type="number" name="age"></div></p>
+            </div>
+        </div>
+        <button type="submit">Add</button>
+    </form>
 </body>
+
 </html>

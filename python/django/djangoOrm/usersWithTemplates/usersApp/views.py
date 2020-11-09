@@ -1,4 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import users
 
 def index(request):
-    return render(request, "index.html")
+    context = {
+        "allUsers": users.objects.all()
+    }
+    return render(request, "index.html", context)
+
+def addUser(request):
+    return redirect('/')
