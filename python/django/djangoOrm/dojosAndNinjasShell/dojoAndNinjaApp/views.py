@@ -18,3 +18,12 @@ def addNinja(request):
     do = dojos.objects.get(id=dojo)
     ninjas.objects.create(firstName= fname, lastName= request.POST["lastName"], dojo= do)
     return redirect('/')
+
+def delete(request):
+    dojo = request.POST["dojo"]
+    do = dojos.objects.get(id=dojo)
+    for i in do.ninja.all():
+        ninja = ninjas.objects.get(id=(i.id))
+        ninja.delete()
+    do.delete()
+    return redirect('/')

@@ -57,7 +57,13 @@
         <div id="dojoList">
             <h1>All the Dojos</h1>
             {% for dojo in dojoList %}
-            <h3>{{ dojo.name}}</h3>
+            <div class="dojos">
+                <form action="/delete" method="post">
+                    {% csrf_token %}
+                    <h3>{{ dojo.name}}</h3>
+                    <p><button type="submit" value="{{dojo.id}}" name="dojo">Delete</button></p>
+                </form>
+            </div>
             <ul>
                 {% for ninja in dojo.ninja.all %}
                 <li>

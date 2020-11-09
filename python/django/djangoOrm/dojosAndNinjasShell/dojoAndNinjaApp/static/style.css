@@ -28,3 +28,9 @@ form{
 .column{
     text-align: left;
 }
+.dojos{
+    display: flex;
+}
+h3{
+    margin-right: 5px;
+}
