@@ -36,6 +36,20 @@ class Queue:
             runner = runner.next
         return False
 
+    def isEmpty(self):
+        if self.head == None:
+            return True
+        return False
+
+    def size(self):
+        counter = 0
+        if self.head != None:
+            runner = self.head
+            while runner != None:
+                counter +=1
+                runner = runner.next
+        return counter
+
     def display(self):
         runner = self.head
         output = ""
@@ -49,4 +63,5 @@ chikfilaDT = Queue()
 chikfilaDT.enqueue("Brad").enqueue("Charles").enqueue("Dawn").display()
 chikfilaDT.dequeue().front()
 chikfilaDT.contains("Chares")
-
+chikfilaDT.isEmpty()
+chikfilaDT.size()
