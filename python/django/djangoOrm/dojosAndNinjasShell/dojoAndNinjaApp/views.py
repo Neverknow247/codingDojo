@@ -3,8 +3,8 @@ from .models import dojos, ninjas
 
 def index(request):
     context = {
-        "dojoList" : dojos.objects.all()
-        # "dojoList" : dojos.objects.get(name = "Best Dojo")
+        "dojoList" : dojos.objects.all(),
+        "counter" : len(dojos.objects.all())
     }
     return render(request, "index.html", context)
 

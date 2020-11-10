@@ -60,6 +60,9 @@
             <div class="dojos">
                 <form action="/delete" method="post">
                     {% csrf_token %}
+                    <h3>
+                        {{ dojo.ninja.all|length }} - 
+                    </h3>
                     <h3>{{ dojo.name}}</h3>
                     <p><button type="submit" value="{{dojo.id}}" name="dojo">Delete</button></p>
                 </form>
