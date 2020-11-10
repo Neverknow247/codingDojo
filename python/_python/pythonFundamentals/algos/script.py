@@ -104,6 +104,16 @@ def book(_list):
 print(book([1,2,13,14,15,37,38,70]))
 
 
+
+def books(_list):
+    newList = ""
+    for i in range(len(_list)):
+        if _list[i-1] != _list[i]-1 & _list[i]+1 != _list[i+1]:
+            newList += str(_list[i])
+    return newList
+print(books([1,2,13,14,15,37,38,70]))
+
+
 # “ Parens Valid
 # Create a function that, given an input string str, returns a boolean whether parentheses in str are valid. Valid sets of parentheses always open before they close, for example. For "Y(3(p)p(3)r)s", return true. Given "N(0(p)3", return false: not every parenthesis is closed. Given "N(0)t )0(k", return false, because the underlined ")" is premature: there is nothing open for it to close.”
 
