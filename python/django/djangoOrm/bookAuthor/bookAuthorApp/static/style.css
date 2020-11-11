@@ -19,6 +19,9 @@ h1{
     display: flex;
     text-align: left;
 }
+.column{
+    text-align: left;
+}
 table{
     border: 2px solid black;
     border-collapse: collapse;

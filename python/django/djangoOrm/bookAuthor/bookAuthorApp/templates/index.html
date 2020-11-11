@@ -19,7 +19,7 @@
                     <p>Description</p>
                 </div>
                 <div class="column">
-                    <form action="/addBook" method="post">
+                    <form action="/bookAdd" method="post">
                         {% csrf_token %}
                         <p><input type="text" name="title"></p>
                         <p><textarea name="desc" cols="30" rows="5"></textarea></p>
