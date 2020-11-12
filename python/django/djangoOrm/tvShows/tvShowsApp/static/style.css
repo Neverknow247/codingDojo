@@ -1,6 +1,25 @@
 body{
     font-family: sans-serif;
+    width: 960px;
+    margin: 0px auto;
 }
-h1{
-    color: aqua;
+table{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+th{
+    border-left: 2px solid black;
+}
+td{
+    border: 2px solid black;
+}
+div{
+
+}
+.row{
+    display: flex;
+}
+.column{
+    display: flex;
+    flex-direction: column;
 }
