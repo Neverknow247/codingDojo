@@ -11,18 +11,20 @@
 
 <body>
     <div id="header">
-        <div id="addBook">
-            <h1>Add a Book</h1>
+        <div id="addAuthor">
+            <h1>Add an Author</h1>
             <div class="content">
                 <div class="column">
-                    <p>Title</p>
-                    <p>Description</p>
+                    <p>First Name</p>
+                    <p>Last Name</p>
+                    <p>Notes</p>
                 </div>
                 <div class="column">
-                    <form action="/bookAdd" method="post">
+                    <form action="/authorAdd" method="post">
                         {% csrf_token %}
-                        <p><input type="text" name="title"></p>
-                        <p><textarea name="desc" cols="30" rows="5"></textarea></p>
+                        <p><input type="text" name="firstName"></p>
+                        <p><input type="text" name="lastName"></p>
+                        <p><textarea name="note" cols="30" rows="5"></textarea></p>
                         <p><button type="submit">Add</button></p>
                     </form>
                 </div>
@@ -35,17 +37,17 @@
                     <th>Title</th>
                     <th>Action</th>
                 </tr>
-                {% for book in books %}
+                {% for author in authors %}
                 <tr>
-                    <td>{{book.id}}</td>
-                    <td>{{book.title}}</td>
-                    <td><a href="/books/{{book.id}}">View</a></td>
+                    <td>{{author.id}}</td>
+                    <td>{{author.firstName}} {{ author.lastName }}</td>
+                    <td><a href="/authors/{{author.id}}">View</a></td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
     </div>
-    <a href="/addAuthor" class="button">Go To Authors</a>
+    <a href="/" class="button">Go To Books</a>
 </body>
 
 </html>
