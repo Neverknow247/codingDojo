@@ -27,3 +27,27 @@ def showView(request, showNum):
         "show" : shows.objects.get(id= showNum)
     }
     return render(request, 'showView.html', context)
+
+def showEdit(request, showNum):
+    context = {
+        "show" : shows.objects.get(id= showNum)
+    }
+    return render(request, 'editShow.html', context)
+
+def editShow(request, showNum):
+    showToEdit = shows.objects.get(id= showNum)
+    title = request.POST['title']
+    network = request.POST['network']
+    releaseDate = request.POST['releaseDate']
+    desc = request.POST['desc']
+    showToEdit.title = title
+    showToEdit.network = network
+    showToEdit.releaseDate = releaseDate
+    showToEdit.desc = desc
+    showToEdit.save()
+    return redirect(f'/shows/{showNum}')
+
+def deleteShow(request, showNum):
+    showToDelete = shows.objects.get(id = showNum)
+    showToDelete.delete()
+    return redirect('/')

@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{show.title}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
 <body>
-<h1>TV Show {{show.id}}</h1>
-<p>Title: {{show.title}}</p>
-<p>Network: {{show.network}}</p>
-<p>Release Date: {{show.releaseDate}}</p>
-<p>Description: {{show.desc}}</p>
-<p>Last Updated: {{show.updatedAt}}</p>
-<p><a href="">Edit</a> | <a href="">Delete</a></p>
+    <div id="header">
+        <h1>TV Show {{show.id}}</h1>
+        <a href="/">Go Back</a>
+    </div>
+    <p>Title: {{show.title}}</p>
+    <p>Network: {{show.network}}</p>
+    <p>Release Date: {{show.releaseDate}}</p>
+    <p>Description: {{show.desc}}</p>
+    <p>Last Updated: {{show.updatedAt}}</p>
+    <p><a href="/shows/{{show.id}}/edit">Edit</a> | <a href="/deleteShow/{{show.id}}">Delete</a></p>
 </body>
+
 </html>
