@@ -13,6 +13,15 @@
         <a href="/">Go Back</a>
     </div>
     <div class="section">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         <form action="/editShow/{{show.id}}" method="POST">
             {% csrf_token %}
             <p>Title</p>

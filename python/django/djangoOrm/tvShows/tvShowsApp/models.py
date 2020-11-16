@@ -8,7 +8,9 @@ class showManager(models.Manager):
         if len(postData['network']) < 3:
             errors['network'] = "Network should be at least 3 characters"
         if len(postData['desc']) < 10:
-            errors['desc'] = "Description should be at least 10 characters"
+            if len(postData['desc']) > 0:
+                errors['desc'] = "Description should be at least 10 characters"
+        return errors
 
 class shows(models.Model):
     title = models.CharField(max_length=255)
