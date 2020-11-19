@@ -11,6 +11,10 @@ class userManager(models.Manager):
             errors["firstName"] = "First name must only contain letters"
         if len(postData['lastName']) < 2:
             errors["lastName"] = "Last name must be at least 2 characters"
+        if postData['lastName'].isalpha():
+            pass
+        else:
+            errors["lastName"] = "Last name must only contain letters"
         return errors
 
 class users(models.Model):

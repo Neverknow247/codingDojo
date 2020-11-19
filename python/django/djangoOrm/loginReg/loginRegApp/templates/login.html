@@ -13,22 +13,29 @@
     <div class="content">
         <div class="article">
             <h1>Registration</h1>
-            <form action="" method="POST">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/register" method="POST">
                 {% csrf_token %}
                 <div class="section">
                     <div class="column">
-                        <label for="fname">First Name</label><br>
-                        <label for="lname">Last Name</label><br>
+                        <label for="firstName">First Name</label><br>
+                        <label for="lastName">Last Name</label><br>
                         <label for="email">Email</label><br>
                         <label for="password">Password</label><br>
                         <label for="cnfmpw">Confirm Password</label>
                     </div>
                     <div class="column">
-                        <input type="text" id="fname" name="fname"><br>
-                        <input type="text" id="lname" name="lname"><br>
-                        <input type="text" id="email" name="email"><br>
-                        <input type="text" id="password" name="password"><br>
-                        <input type="text" id="cnfmpw" name="cnfmpw">
+                        <input type="text" name="firstName"><br>
+                        <input type="text" name="lastName"><br>
+                        <input type="text" name="email"><br>
+                        <input type="password" name="password"><br>
+                        <input type="password" name="cnfmpw">
                     </div>
                 </div>
                 <button type="submit">Register</button>
