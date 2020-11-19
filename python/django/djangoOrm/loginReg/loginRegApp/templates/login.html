@@ -16,7 +16,7 @@
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
-                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
                 {% endfor %}
             </ul>
             {% endif %}
@@ -33,7 +33,7 @@
                     <div class="column">
                         <input type="text" name="firstName"><br>
                         <input type="text" name="lastName"><br>
-                        <input type="text" name="email"><br>
+                        <input type="email" name="email"><br>
                         <input type="password" name="password"><br>
                         <input type="password" name="cnfmpw">
                     </div>
@@ -43,6 +43,20 @@
         </div>
         <div class="article">
             <h1>Login</h1>
+            <form action="/account" method="POST">
+                {% csrf_token %}
+                <div class="section">
+                    <div class="column">
+                        <label for="email">Email</label><br>
+                        <label for="password">Password</label><br>
+                    </div>
+                    <div class="column">
+                        <input type="email" name="email"><br>
+                        <input type="password" name="password"><br>
+                    </div>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
         </div>
     </div>
 </body>

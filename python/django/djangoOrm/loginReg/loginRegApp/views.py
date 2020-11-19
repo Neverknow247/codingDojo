@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 import bcrypt
 
@@ -22,8 +22,27 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         pw_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
-        users.objects.create(firstName=fname, lastName=lname, email=email, password=pw_hash)
+        newUser = users.objects.create(firstName=fname, lastName=lname, email=email, password=pw_hash)
+        request.session['loggedInId'] = newUser.id
         return redirect('/success')
 
 def success(request):
-    return render(request, 'success.html')
+    context = {
+        'loggedInUser': users.objects.get(id=request.session['loggedInId']) 
+    }
+    return render(request, 'success.html', context)
+
+def logout(request):
+    request.session.clear()
+    return redirect('/')
+
+def account(request):
+    errors = users.objects.loginValidator(request.POST)
+    if len(errors) >0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        return redirect('/login')
+    else:
+        emailMatch = users.objects.filter(email= request.POST['email'])
+        request.session['loggedInId'] = emailMatch[0].id
+    return redirect('/success')
