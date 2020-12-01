@@ -28,3 +28,30 @@ balance([1, 2, 2, 1, 5, 1])
 // Given a sorted array and a value, return whether the array contains that value. Do not sequentially iterate the array. Instead, ‘divide and conquer’, taking advantage of the fact that the array is sorted. As always, only use built-in functions that you are prepared to recreate (write yourself) on demand!
 
 
+function search(arr, value){
+    y = Math.floor((arr.length-1)/2)
+    x = arr[y]
+    count = 0
+    console.log(y)
+    console.log(x)
+    while (x >= value){
+        console.log('test')
+        console.log(x)
+        if(x == value){
+            console.log("true")
+            return true
+        }
+        if (y == 0){
+            console.log("false")
+            return false
+        }
+        for(i=0; i<count; i++){
+            pass
+        }
+        y = Math.floor(y/2)
+        console.log(y)
+        x = arr[y]
+        console.log(x)
+    }
+}
+search([1,2,3,4,5,6], 1)
