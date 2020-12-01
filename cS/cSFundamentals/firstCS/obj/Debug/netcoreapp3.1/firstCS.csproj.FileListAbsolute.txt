@@ -1,0 +1,12 @@
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/bin/Debug/netcoreapp3.1/firstCS.deps.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/bin/Debug/netcoreapp3.1/firstCS.runtimeconfig.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/bin/Debug/netcoreapp3.1/firstCS.runtimeconfig.dev.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/bin/Debug/netcoreapp3.1/firstCS.dll
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/bin/Debug/netcoreapp3.1/firstCS.pdb
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.csprojAssemblyReference.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.AssemblyInfoInputs.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.AssemblyInfo.cs
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.csproj.CoreCompileInputs.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.dll
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.pdb
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/firstCS/obj/Debug/netcoreapp3.1/firstCS.genruntimeconfig.cache
