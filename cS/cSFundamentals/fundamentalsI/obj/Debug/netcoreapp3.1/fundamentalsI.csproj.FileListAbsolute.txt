@@ -1,0 +1,12 @@
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/bin/Debug/netcoreapp3.1/fundamentalsI.deps.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/bin/Debug/netcoreapp3.1/fundamentalsI.runtimeconfig.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/bin/Debug/netcoreapp3.1/fundamentalsI.runtimeconfig.dev.json
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/bin/Debug/netcoreapp3.1/fundamentalsI.dll
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/bin/Debug/netcoreapp3.1/fundamentalsI.pdb
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.csprojAssemblyReference.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.AssemblyInfoInputs.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.AssemblyInfo.cs
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.csproj.CoreCompileInputs.cache
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.dll
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.pdb
+/Users/nathanbell/Documents/devLife/codingDojo/cS/cSFundamentals/fundamentalsI/obj/Debug/netcoreapp3.1/fundamentalsI.genruntimeconfig.cache
