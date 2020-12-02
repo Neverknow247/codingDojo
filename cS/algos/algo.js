@@ -55,3 +55,26 @@ function search(arr, value){
     }
 }
 search([1,2,3,4,5,6], 1)
+
+
+
+function noDupes(arr){
+    newArr = [];
+    dupe = false;
+    for(i=0; i<arr.length; i++){
+        for(j=0; j<newArr.length; j++){
+            if(newArr[j] == arr[i]){
+                dupe = true;
+            }
+        }
+        if(dupe == false){
+        newArr.push(arr[i]);
+        }
+        else{
+            dupe = false;
+        }
+    }
+    console.log(newArr);
+    return newArr;
+}
+noDupes([1,2,1,3,2,1,4])
